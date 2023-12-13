@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         //5 is the speed/height of the jump
-        body.velocity = new Vector2(body.velocity.x, 5);
+        body.velocity = new Vector2(body.velocity.x, 8);
         anim.SetTrigger("jump");
         grounded = false;
     }
