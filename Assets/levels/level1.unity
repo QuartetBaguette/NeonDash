@@ -9487,7 +9487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 867223504}
-  - component: {fileID: 867223507}
+  - component: {fileID: 867223508}
   - component: {fileID: 867223505}
   - component: {fileID: 867223506}
   m_Layer: 0
@@ -9554,8 +9554,8 @@ MonoBehaviour:
   previousRoom: {fileID: 773542416}
   nextRoom: {fileID: 757365507}
   cam: {fileID: 519420033}
---- !u!61 &867223507
-BoxCollider2D:
+--- !u!68 &867223508
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9586,19 +9586,15 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00874348, y: 4.8114595}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.33683816, y: 13}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.009958267, y: -0.9629507}
+  - {x: -0.01468277, y: 11.362086}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &898293975
 GameObject:
   m_ObjectHideFlags: 0
