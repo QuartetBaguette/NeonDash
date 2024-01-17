@@ -21,10 +21,5 @@ public class Health : MonoBehaviour
             GetComponent<PlayerMovement>().enabled = false;
             dead = true;
         }
-        // if(currentHealth > 0) {
-        //     //Player hurt
-        // } else {
-        //     //Player dead
-        // }
     }
 }
