@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Scripting;
 
 public class Health : MonoBehaviour
 {
@@ -7,6 +6,8 @@ public class Health : MonoBehaviour
     public float currentHealth { get; private set;}
     private Animator anim;
     private bool dead;
+    private Rigidbody2D body;
+    private PlayerMovement playerMovement;
 
     private void Awake() {
         currentHealth = startingHealth;
@@ -19,6 +20,11 @@ public class Health : MonoBehaviour
         if(!dead) {
             anim.SetTrigger("die");
             GetComponent<PlayerMovement>().enabled = false;
+            GetComponent<Rigidbody2D>().simulated = false;
+            if(!anim.GetBool("grounded")) {
+                anim.SetBool("grounded", true);
+                anim.Play("die");
+            }
             dead = true;
         }
     }
@@ -35,5 +41,6 @@ public class Health : MonoBehaviour
         anim.ResetTrigger("die");
         anim.Play("idle");
         GetComponent<PlayerMovement>().enabled = true;
+        GetComponent<Rigidbody2D>().simulated = true;
     }
 }
