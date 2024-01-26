@@ -6,8 +6,6 @@ public class Health : MonoBehaviour
     public float currentHealth { get; private set;}
     private Animator anim;
     private bool dead;
-    private Rigidbody2D body;
-    private PlayerMovement playerMovement;
 
     private void Awake() {
         currentHealth = startingHealth;
