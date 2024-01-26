@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     public Rigidbody2D body;
-    private Animator anim;
+    public Animator anim;
     public bool grounded;
     
     private void Awake()
